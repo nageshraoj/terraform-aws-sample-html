@@ -6,15 +6,15 @@ terraform {
         version = "~> 3.44"
     }
   }
-  backend "s3" {
-     bucket = "nagesh-070921"
-     key = "workspace/terraform.tfstate"
-     region = "us-east-2"
-     dynamodb_table = "demostate"
-  }
+  # backend "s3" {
+  #    bucket = "nagesh-070921"
+  #    key = "workspace/terraform.tfstate"
+  #    region = "us-east-2"
+  #    dynamodb_table = "demostate"
+  # }
 }
 
 provider "aws" {
-  profile = "default"
+  # profile = "default"
   region = "us-east-2"
 }
