@@ -11,7 +11,7 @@ terraform {
   #    key = "workspace/terraform.tfstate"
   #    region = "us-east-2"
   #    dynamodb_table = "demostate"
-  # }
+  # } 
 }
 
 provider "aws" {
