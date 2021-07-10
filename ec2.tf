@@ -1,5 +1,6 @@
 resource "aws_instance" "demoec2" {
-  ami = data.aws_ami.myec2.id
+  # ami = data.aws_ami.myec2.id
+  ami = "ami-0233c2d874b811deb"
   instance_type = var.ec2type
   subnet_id = aws_subnet.demosubnet.id
   vpc_security_group_ids = [ aws_security_group.demosg1.id, aws_security_group.demosg2.id ]
