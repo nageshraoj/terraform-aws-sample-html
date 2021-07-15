@@ -1,17 +1,20 @@
-data "aws_ami" "myec2" {
+data "aws_ami" "demoami" {
   most_recent = true
-  owners = [ "amazon" ]
+  owners      = ["amazon"]
   filter {
-    name = "root-device-type"
-    values = [ "ebs" ]
-  }
-
-  filter {
-    name = "virtualization-type"
-    values = [ "hvm" ]
+    name   = "root-device-type"
+    values = ["ebs"]
   }
   filter {
-     name = "name"
-     values = [ "amzn2-ami-hvm-*" ]
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*"]
+  }
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
   }
 }
